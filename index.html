@@ -3,36 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="https://idn.freepik.com/foto-vektor-gratis/logo"></script>
-
+    <title>My Website</title>
+    <link rel="stylesheet" href="/css/css/style.css">
 </head>
-
 <body>
+    <nav>
+        <div class="logo">👨‍💻</div>
+        <div class="CodingCamp" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Our Profile</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#message">Message Us</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <div class="logo">Logo</div>
+    <section id="home" class="hero">
+        <h1 id="welcomeText">Hi Guest, Selamat Datang Di Websiteku !</h1>
+        <p>Ini Adalah Website Pertamaku !</p>
+    </section>
 
-        <nav class ="flex">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Blog</a>
+    <div class="banner">Mini Project Revou Coding Camp</div>
 
-        </nav>
-        
-    </header>
+    <section id="headquarters">
+        <h2>Our Headquarter</h2>
+        <div class="headquarter">
+            <div class="hq-item">
+                <div class="hq-circle"></div>
+                <p>Jakarta</p>
+            </div>
+            <div class="hq-item">
+                <div class="hq-circle"></div>
+                <p>Bandung</p>
+            </div>
+            <div class="hq-item">
+                <div class="hq-circle"></div>
+                <p>Surabaya</p>
+            </div>
+        </div>
+    </section>
 
-    <main></main>
+    <section id="profile">
+        <h2>Our Profile</h2>
+        <div class="about-content">
+            <h3>About The MyWebsite</h3>
+            <p>Disini Adalah Website Buatan Saya Pertamaku Semoga Anda Menyukainnya, Terima Kasih.</p>
 
-    <footer></footer>
+            <h3>Visi</h3>
+            <p>Visi Saya Adalah Menjadi Seorang Front End Developer Professional.</p>
+            
+            <h3>Misi</h3>
+            <p>Misi Saya Adalah Membuat Website Yang Menarik Dan Mudah Digunakan.</p>
+        </div>
+    </section>
 
+    <section id="message">
+        <h2>Message Us</h2>
+        <div class="form-container">
+            <div class="form-left">
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                        <div class="error" id="nameError">Name is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Tanggal Lahir</label>
+                        <input type="date" id="birthdate">
+                        <div class="error" id="birthdateError">Birthdate is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+                            <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                        </div>
+                        <div class="error" id="genderError">Please select gender</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" placeholder="Enter your message"></textarea>
+                        <div class="error" id="messageError">Message is required</div>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="form-right">
+                <div class="result-item">
+                    <div class="result-label">Current time:</div>
+                    <div id="resultTime">-</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Nama:</div>
+                    <div id="resultName">-</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Tanggal Lahir:</div>
+                    <div id="resultBirthdate">-</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Jenis Kelamin:</div>
+                    <div id="resultGender">-</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Pesan:</div>
+                    <div id="resultMessage">-</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created By Achmad Rizqi Mubarok</p>
+    </footer>
 
     <script src="/js/script.js"></script>
-    
 </body>
-
 </html>
-
